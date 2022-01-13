@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <style>
+        .flex-container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            background-color: #e74c3c;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container > div {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin: 5px;
+            width: 30%;
+            height: 30%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h2>Belajar Javascript</h2>
+    <div class="flex-container">
+        <div id="Hari">
+            Hari
+        </div>
+    </div>
+    
+    <script>
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        document.getElementById("Hari").innerHTML="Today is " +day;
+    </script>
+</body>
+</html>

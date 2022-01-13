@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+</style>
+<h2>Fetch a JSON file with XMLHttpRequest</h2>
+<p id="demo"></p>
+
+<script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+    myObj = JSON.parse(this.responseText);
+   //membaca propertyName   
+   let text="";
+   let no=1;
+   text="<table><tr><th>No</th><th>Angrrek</th><th>Gambar</th><th>Harga</th></tr>";
+   for (const x in myObj) {
+    text+="<tr><td>"+no+"</td><td>"+myObj[x].nama+"</td><td><img src='img/" + myObj[x].img + "'></td><td>"+myObj[x].harga+"</td></tr>";
+	no++;
+   }
+  document.getElementById("demo").innerHTML = text;
+}
+xmlhttp.open("GET", "tnm_hias.json");
+xmlhttp.send();
+
+</script>
+</body>
+</html>

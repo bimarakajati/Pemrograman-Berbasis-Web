@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fetch a JSON file with XMLHttpRequest</h2>
+<p id="demo"></p>
+
+<script>
+const xmlhttp = new XMLHttpRequest();
+let text="";
+let myObj ;
+xmlhttp.onload = function() {
+  myObj = JSON.parse(this.responseText);
+  //membaca propertyName
+  myObj.forEach(myFunction);  
+  document.getElementById("demo").innerHTML = text;
+}
+xmlhttp.open("GET", "tnm_hias.json");
+xmlhttp.send();
+
+function myFunction(value, index, array) {
+  text += myObj[index].nama  + "<br>"; 
+}
+
+</script>
+</body>
+</html>

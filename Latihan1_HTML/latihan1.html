@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Belajar HTML</title>
+    <style>
+        /* HTML Link Colors */
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        /* Link Buttons */
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+        background-color: green;
+        }
+        /* Background Image on a Page */
+        body {
+            background-image: url('alam3.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /*background-size: cover; */
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    Hello HTML!
+    <h1>Heading 1</h1>
+    <hr>
+    <p>My first paragraph.</p>
+    <!-- <a href="https://dinus.ac.id" target="_blank">Udinus</a> -->
+    <!-- <br> -->
+    <!-- <img src="logo.jpg" alt="logo" height="500px"> -->
+    <!-- <br> -->
+
+    <!-- HTML Formatting Elements -->
+    <b>Bold text</b>
+    <strong>Important text</strong>
+    <i>Italic text</i>
+    <em>Emphasized text</em>
+    <mark>Marked text</mark>
+    <small>Smaller text</small>
+    <del>Deleted text</del>
+    <ins>Inserted text</ins>
+    <sub>Subscript text</sub>
+    <sup>Superscript text</sup>
+    <br>
+
+    <!-- Link - target Attribute -->
+    <a href="https://dinus.ac.id" target="_self">Udinus</a> <!-- Default. Opens the document in the same window/tab as it was clicked -->
+    <a href="https://dinus.ac.id" target="_blank">Udinus</a> <!-- Opens the document in a new window or tab -->
+    <a href="https://dinus.ac.id" target="_parent">Udinus</a> <!-- Opens the document in the parent frame -->
+    <a href="https://dinus.ac.id" target="_top">Udinus</a> <!-- Opens the document in the full body of the window -->
+    <br>
+
+    <!-- Absolute URLs vs. Relative URLs -->
+    <h2>Absolute URLs</h2>
+    <p><a href="https://www.w3.org/">W3C</a></p>
+    <p><a href="https://www.google.com/">Google</a></p>
+    <h2>Relative URLs</h2>
+    <p><a href="latihan1.html">latihan 1 </a></p>
+    <p><a href="latihan2.html">latihan 2</a></p>
+
+    <!-- Use an Image as a Link -->
+    <a href="https://dinus.ac.id" target="_blank"><img src="logo.jpg" style="width:42px;height:42px;"></a>
+    <!-- Link to an Email Address -->
+    <p><a href="mailto:suprayogi@dsn.dinus.ac.id">Send email</a></p>
+    <!-- Button as a Link -->
+    <button onclick="document.location='latih1.html'">HTML Tutorial</button>
+    <!-- Link Titles -->
+    <a href="https://dinus.ac.id" title="home page website udinus" target="">Udinus</a>
+    <br>
+
+    <!-- create bookmarks -->
+    <h2 id="C4">Chapter 4</h2>
+    <a href="#C4">Jump to Chapter 4</a>
+
+    <!-- Image -->
+    <img src=“kampus2.jpeg" alt="Girl in a jacket" style="width:100px;height:100px;">
+    <!-- Images in Another Folder -->
+    <img src=“img/kampus2.jpeg" alt="Girl in a jacket" style="width:100px;height:100px;">
+    <!-- Images in Another server -->
+    <img src=“http://dinus/ac/id/img/kampus2.jpeg" alt="Girl in a jacket" style="width:100px;height:100px;">
+
+    <!-- Image Floating -->
+    <img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+
+    <!-- Background Images -->
+    <div style="background-image: url(‘kampus1.jpeg');">
+        Teks
+    </div>
+    <p style="background-image: url(‘kampus1.jpeg');">
+        Teks
+    </p>
+
+    <!-- Picture Element -->
+    <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="kampus1.jpeg">
+        <img src="img_girl.jpg" style="width:auto;">
+    </picture>
+
+</body>
+</html>

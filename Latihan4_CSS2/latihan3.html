@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout Flex-Box</title>
+        <style>
+            .header{
+                background-color: #e74c3c;
+                padding: 50px;
+                text-align: center;
+                color: white;
+            }
+            body{
+                font-family: Verdana;
+                margin: 0;
+                background-color: #ecf0f1;
+            }
+            .navbar{
+                background-color: #2c3e50;
+                display: flex;
+                padding: 15px;
+            }
+            .navbar a{
+                text-decoration: none;
+                color: white;
+                padding: 5px;
+            }
+            .navbar a:hover{
+                background-color: #34495e;
+            }
+            .row{
+                display: flex;
+                height: 370px;
+            }
+            .side{
+                flex: 20%;
+                background-color: #bdc3c7;
+                padding: 20px;
+            }
+            .main{
+                flex: 80%;
+                padding: 20px;
+            }
+            .footer{
+                background-color: #c0392b;
+                text-align: center;
+                color: white;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="header">
+            Personal Website
+       </div>
+       <div class="navbar">
+           <a href="#">Link1</a>
+           <a href="#">Link2</a>
+           <a href="#">Link3</a>
+       </div>
+       <div class="row">
+           <div class="side">
+               Daftar Menu<br>
+               1<br>
+               2<br>
+               3<br>
+           </div>
+           <div class="main">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, enim excepturi. Mollitia eveniet voluptatum distinctio nihil fugiat asperiores, accusantium, ullam unde dolore quas, adipisci voluptatibus saepe atque neque quam voluptas?
+           </div>
+       </div>
+       <div class="footer">
+           Design by Bima @2021
+       </div>
+    </body>
+</html>

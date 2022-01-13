@@ -1,0 +1,142 @@
+body {
+    background-color: #f7f7f7;
+}
+
+/* Add Animation */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar-nav li a {
+    font-size: 17px;
+}
+
+/* Card */
+.card {
+    transition: all 0.5s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Product */
+#clothing {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.cart_logo {
+    transition: all 0.25s ease;
+}
+.cart_logo:hover {
+    transform: scale(1.025);
+}
+.cart_img {
+    height: 400px;
+}
+
+/* Maps */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+.map-responsive iframe {
+    border: 0;
+    margin-top: 10px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.address,
+.telepon {
+    list-style-type: circle;
+}
+
+/* Buku Tamu */
+.logo {
+    transition: all 0.25s ease;
+}
+.logo:hover {
+    transform: scale(1.025);
+}
+.oreo {
+    height: 300px;
+    width: 300px;
+}
+.tombol {
+    width: 50px;
+}
+
+/* Footer */
+.footer {
+    background-color: #212529;
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 14px;
+    padding: 15px;
+}
+.footer a {
+    text-decoration: none;
+    color: #dc3545;
+}
+.footer a:hover {
+    color: #ecf0f1;
+}
+.fa {
+    padding: 5px;
+}
+
+/* SCROLL UP BUTTON */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    /* border: none; */
+    outline: none;
+    background-color: #ff5252;
+    border-color: #b33939;
+    color: white;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+}
+#myBtn:hover {
+    background-color: #555;
+    border-color: #fff;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #292929;
+    /* border-radius: 10px; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

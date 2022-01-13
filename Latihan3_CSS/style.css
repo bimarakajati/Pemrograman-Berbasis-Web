@@ -1,0 +1,45 @@
+/* CSS GROUPING SELECTOR */
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: beige;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: left;
+}
+h3{
+    text-align: right;
+}
+a{
+    text-decoration: none;
+}
+.td1{
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+.td2{
+    text-decoration: line-through;
+    text-transform: lowercase;
+}
+.td3{
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+.indentasi{
+    text-indent: 50px;
+}
+.shadow{
+    text-shadow: 2px 2px 5px red;
+}
+.serif{
+    font-family: 'Times New Roman', Times, serif;
+}
+.sansserif{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.monospace{
+    font-family: 'Courier New', Courier, monospace;
+}

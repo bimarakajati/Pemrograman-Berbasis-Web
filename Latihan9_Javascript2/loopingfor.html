@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <style>
+        .flex-container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            background-color: #e74c3c;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container > div {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin: 5px;
+            width: 30%;
+            height: 30%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h2>Belajar Javascript</h2>
+    <div class="flex-container">
+        <div id="LoopingFor">
+            Loop
+        </div>
+    </div>
+    
+    <script> 
+        const motor = ["Honda", "Suzuki", "Yamaha"];
+        let text1 = "";
+        for (let i=0; i<motor.length;i++) {
+            text1 += motor[i] + "<br>";
+        }
+        document.getElementById("LoopingFor").innerHTML=text1;
+    </script>
+</body>
+</html>

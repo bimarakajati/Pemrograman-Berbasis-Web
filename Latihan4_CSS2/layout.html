@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Layout Flex-Box</title>
+<style>
+  .header {
+    background-color:DarkOliveGreen;
+	padding:50px;
+	text-align:center;
+	color:white;
+  }
+  body {
+	font-family:Verdana;
+	margin:0;
+  }
+  .navbar {
+     background-color:ForestGreen;
+	 display:flex;
+	 padding:15px;
+  }
+  .navbar a{
+     text-decoration:none;
+	 color:white;
+	 padding:15px;
+  }
+  .navbar a:hover {
+     background-color:DarkGreen;
+  }
+  .row{
+    display:flex;
+	height:370px;
+  }
+  .side {
+	flex:20%;
+	background-color:grey;
+	padding:20px;
+  }
+  .main {
+	  flex:80%;
+	  padding:20px;
+  }
+  .footer {
+     background-color:ForestGreen;
+	 text-align:center;
+	 color:white;
+	 padding:10px;
+  }
+</style>
+<body>
+<div class="header">
+   Personal Web Site
+</div>
+<div class="navbar">
+   <a href="#">Link 1 </a>
+   <a href="#">Link 2 </a>
+   <a href="#">Link 3 </a>
+</div>
+<div class="row">
+	<div class="side">
+	   Daftar Menu
+	   1<br>
+	   2<br>
+	   3<br>
+	</div>
+	<div class="main">
+	   Konten Utama
+	</div>	
+</div>
+<div class="footer">
+  design By Joko @2021
+</div>
+</body>
+</html>
+
+

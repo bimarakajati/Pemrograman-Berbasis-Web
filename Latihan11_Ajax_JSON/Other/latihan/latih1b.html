@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+/*
+function loadDoc(){
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload=function(){
+    document.getElementById("demo").innerHTML=this.responseText;
+  }
+  xhttp.open("GET","test.txt",true);
+  xhttp.send();
+}
+*/
+function loadDoc(url, cFunction) {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {cFunction(this);}
+  xhttp.open("GET", url);
+  xhttp.send();
+}
+function myFunction1(xhttp) {
+  document.getElementById("demo").innerHTML=xhttp.responseText;
+}
+function myFunction2(xhttp) {
+  document.getElementById("demo").innerHTML="Holaaaaa.....";
+}
+
+</script>
+</head>
+<body>
+<h1>Belajar AJAX</h1>
+<h2>javascript</h2>
+<div id="demo">
+  <h2>Let AJAX change this text</h2>  
+</div>
+<button type="button" onclick="loadDoc('test1.txt',myFunction1)">fungsi1</button>
+<button type="button" onclick="loadDoc('test2.txt',myFunction2)">fungsi2</button>
+</body>
+</html>

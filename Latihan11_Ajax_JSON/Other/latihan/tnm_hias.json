@@ -1,0 +1,18 @@
+[
+{"nama":"Suksom",
+ "img":"agl_suksom.jpg",
+ "harga":35000
+},
+{"nama":"RotundumAceh",
+ "img":"agl_rotundumAceh.jpg",
+ "harga":30000
+},
+{"nama":"ayunindi",
+ "img":"agl_ayunindi.jpg",
+ "harga":65000
+},
+{"nama":"bigroy",
+ "img":"agl_bigroy.jpg",
+ "harga":85000
+}
+]

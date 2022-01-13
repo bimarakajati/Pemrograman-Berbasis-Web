@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fetch a JSON file with XMLHttpRequest</h2>
+<p id="demo"></p>
+
+<script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+    myObj = JSON.parse(this.responseText);
+   //membaca propertyName   
+   let text="";
+   for (const x in myObj) {
+	text += myObj[x].img + ", ";
+   }
+  document.getElementById("demo").innerHTML = text;
+}
+xmlhttp.open("GET", "tnm_hias.json");
+xmlhttp.send();
+
+</script>
+</body>
+</html>

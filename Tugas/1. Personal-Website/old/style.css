@@ -1,0 +1,92 @@
+/* HTML AND BODY */
+body, html{
+    margin: 0;
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    background-color: #292929;
+}
+html{
+    scroll-behavior: smooth;
+}
+a:link,:visited{
+    text-decoration: none;
+    color: #f7484e;
+}
+a:hover{
+    color: white;
+}
+
+/* HEADER */
+.header{
+    background-color: #292929;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+.header h3{
+    font-family:Candara;
+}
+.header h1{
+    font-family:Arial;
+}
+.header img{
+    width: 200px;
+    border-radius: 50%;
+}
+.header table{
+    font-family:Arial;
+}
+.header_content{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* ABOUT */
+.about{
+    background-color: #f7484e;
+    height: 100%;
+    text-align: center;
+    font-family:Arial;
+    color: white;
+}
+.about p{
+    font-size: 20px;
+}
+
+/* GUEST BOOK */
+.guest{
+    background-color: #ffffff;
+    height: 100%;
+    font-family:Arial;
+    color: black;
+}
+.guest h1{
+    text-align: center;
+}
+.guest table{
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+/* CONTACT */
+.contact{
+    background-color: #292929;
+    height: 100%;
+    color: white;
+    font-family:Arial;
+}
+.contact h1, p{
+    text-align: center;
+}
+.contact table{
+    margin-left: auto;
+    margin-right: auto;
+}

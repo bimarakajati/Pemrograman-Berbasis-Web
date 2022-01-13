@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Daftar Tanaman Hias</h1>
+<h2>Kategori Aglonema</h2>
+<p id="demo"></p>
+
+<script>
+	const xmlhttp = new XMLHttpRequest();
+	xmlhttp.onload = function() {
+		myObj = JSON.parse(this.responseText);
+		let text="";
+		for (const x in myObj) {
+			text+="<div class='gallery'>";
+			text+="<a target='_blank' href='img/"+myObj[x].img+"'>";
+			text+="<img src='img/"+myObj[x].img+"' width='600' height='400'>";
+			text+="</a>";
+			text+="<div class='desc'>"+myObj[x].nama+"<br>"+myObj[x].harga+"</div>";						
+			text+="</div>";
+		}
+		document.getElementById("demo").innerHTML = text;
+  }
+  xmlhttp.open("GET", "tnm_hias.json");
+  xmlhttp.send();
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        .flex-container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            background-color: #e74c3c;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container > div {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin: 5px;
+            width: 30%;
+            height: 30%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<script>
+    function tambah(){
+        a = parseInt(document.getElementById('nilai1').value);
+        b = parseInt(document.getElementById('nilai2').value);
+        document.getElementById('hasil').value = a + b;
+    }
+    function kurang(){
+        a = parseInt(document.getElementById('nilai1').value);
+        b = parseInt(document.getElementById('nilai2').value);
+        document.getElementById('hasil').value = a - b;
+    }
+    function kali(){
+        a = parseInt(document.getElementById('nilai1').value);
+        b = parseInt(document.getElementById('nilai2').value);
+        document.getElementById('hasil').value = a * b;
+    }
+</script>
+<body>
+    <h2>Belajar Javascript</h2>
+    <div class="flex-container">
+        <div id="demo">
+            <table>
+                <form>
+                    <tr>
+                        <td>Nilai 1</td>
+                        <td><input type="text" id="nilai1"></td>
+                    </tr>
+                    <tr>
+                        <td>Nilai 2</td>
+                        <td><input type="text" id="nilai2"></td>
+                    </tr>
+                    <tr>
+                        <td>Hasil</td>
+                        <td><input type="text" id="hasil" readonly></td>
+                    </tr>
+                </form>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="tambah()">+</button>
+                        <button onclick="kurang()">-</button>
+                        <button onclick="kali()">*</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

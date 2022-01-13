@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <link type="text/css" rel="stylesheet" href="css1.css">
+    <script>
+        function sayHello(){
+            document.getElementById("demo").innerHTML="Hello Javascript";
+        }
+    </script>
+    <script src="js1.js"></script>
+</head>
+<body>
+    <h2>Belajar Javascript</h2>
+    <div class="flex-container">
+        <div id="demo">
+            <img id="gb" src="img1.jpg" style="width: 200px;height: auto;">
+        </div>
+    </div>
+    
+    <!-- <script>
+        document.getElementById("demo").innerHTML="Hello Javascript";
+    </script> -->
+    <button onclick="sayHello()">Say Hello</button>
+    <button onclick="gantiFont()">Ganti Font</button>
+    <button onclick='document.getElementById("demo").style.color="#c0392b";'>Ganti Warna Merah</button>
+    <button onclick="gambar1()">Ganti Gambar 1</button>
+    <button onclick="gambar2()">Ganti Gambar 2</button>
+</body>
+</html>

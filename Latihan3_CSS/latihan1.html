@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Latihan CSS</title>
+        <!-- CSS EXTERNAL -->
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <!-- CSS INTERNAL -->
+        <style>
+            /* CSS UNIVERSAL SELECTOR */
+            *{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            /* SELECT ELEMENTS BASED ON CLASS */
+            .prgf{
+                width: 50%;
+                font-family: Verdana;
+                font-size: 16px;
+                text-align: center;
+                color: green;
+                /* white-space: nowrap; */
+            }
+            /* SELECT ELEMENTS BASED ON ID */
+            #kotak{
+                width: 200px;
+                height: 100px;
+                text-align: center;
+                border: 1px solid green;
+            }
+            .judul{
+                background-color: green;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg"></div>
+        <p class="prgf">
+            Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf 
+            Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf 
+            <!-- CSS INLINE -->
+            <span style="color: red;">Selamat Datang</span>
+            Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf Teks pada paragraf 
+        </p>
+
+        <div id="kotak">
+            Teks pada kotak
+        </div>
+
+        <div class="judul">
+            Judul 1
+        </div>
+
+        <!-- TEXT ALIGNMENT -->
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        
+        <!-- TEXT DECORATION -->
+        <p>
+            A link with no underline:
+            <a href="https://bimarakajati.github.io">Bima</a>
+        </p>
+        <p class="td1">Mencoba coba</p>
+        <p class="td2">Mencoba coba</p>
+        <p class="td3">Mencoba coba</p>
+
+        <!-- TEXT SPACING -->
+        <p class="indentasi">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab totam accusamus tempora fugit reprehenderit, culpa facere amet in exercitationem delectus distinctio corporis, doloremque atque animi expedita est perspiciatis recusandae asperiores?
+        </p>
+
+        <!-- TEXT SHADOW -->
+        <p class="shadow">
+            TEKS DENGAN BAYANGAN
+        </p>
+
+        <!-- FONT FAMILY -->
+        <p class="serif">Ini adalah kalimat.</p>
+        <p class="sansserif">Ini adalah kalimat.</p>
+        <p class="monospace">Ini adalah kalimat.</p>
+    </body>
+</html>

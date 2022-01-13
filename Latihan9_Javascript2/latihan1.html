@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <style>
+        .flex-container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            background-color: #e74c3c;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container > div {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin: 5px;
+            width: 30%;
+            height: 30%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h2>Belajar Javascript</h2>
+    <div class="flex-container">
+        <div id="Jam">
+            Greeting
+        </div>
+        <div id="Hari">
+            Days
+        </div>
+        <div id="Looping">
+            Loop
+        </div>
+        <div id="LoopingFor">
+            Loop
+        </div>
+    </div>
+    
+    <script>
+        const time = new Date().getHours();
+        if (time < 9) {
+            document.getElementById("Jam").innerHTML = "Selamat Pagi!";
+        } else if (time < 18) {
+            document.getElementById("Jam").innerHTML = "Selamat Siang!";
+        } else {
+            document.getElementById("Jam").innerHTML = "Selamat Malam!";
+        }
+
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Minggu";
+                break;
+            case 1:
+                day = "Senin";
+                break;
+            case 2:
+                day = "Selasa";
+                break;
+            case 3:
+                day = "Rabu";
+                break;
+            case 4:
+                day = "Kamis";
+                break;
+            case 5:
+                day = "Jumat";
+                break;
+            case 6:
+                day = "Sabtu";
+                break;
+        }
+        document.getElementById("Hari").innerHTML = "Sekarang adalah hari " + day;
+
+        let text = "";
+        for (let i=1; i<=5; i++) {
+            text += "Angka ke-" + i + "<br>";
+        }
+        document.getElementById("Looping").innerHTML = text;
+        
+        const motor = ["Honda", "Suzuki", "Yamaha"];
+        let text1 = "";
+        for (let i=0; i<motor.length; i++) {
+            text1 += motor[i] + "<br>";
+        }
+        document.getElementById("LoopingFor").innerHTML = text1;
+    </script>
+</body>
+</html>

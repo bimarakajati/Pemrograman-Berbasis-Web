@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <script>
+        function loadDoc(url, cFunction){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                cFunction(this);
+            };
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+        function myFunction1(xhttp) {
+            document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+        function myFunction2(xhttp) {
+            document.getElementById("demo2").innerHTML = "Masukk";
+            document.getElementById("demo2").style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <h1>Belajar AJAX</h1>
+    <h2>Javascript</h2>
+    <div id="demo">
+        <h2>Let AJAX change this text</h2>
+    </div>
+    <div id="demo2">
+        <h2>Let AJAX change this text</h2>
+    </div>
+    <button type="button" onclick="loadDoc('demo.txt', myFunction1)">Ubah konten [Ajax]</button>
+    <button type="button" onclick="loadDoc('demo.txt', myFunction2)">Ubah konten [Ajax]</button>
+</body>
+</html>

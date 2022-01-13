@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bima Rakajati - Personal Website</title>
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div class="header" id="header">
+            <div class="header_content">
+                <img src="bima.png">
+                <h1>BIMA RAKAJATI</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#about">ABOUT</a>
+                            <a href="#guest">GUEST BOOK</a>
+                            <a href="#contact">CONTACT</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="about" id="about">
+            <br>
+            <h1>ABOUT ME</h1>
+            <p>I'm a Computer Science student from Dian Nuswantoro University.</p>
+            <p>I love programming with Python, C++, and Java.</p>
+        </div>
+
+        <!-- GUEST BOOK -->
+        <div class="guest" id="guest">
+            <br>
+            <h1>GUEST BOOK</h1>
+            <table>
+                <td>
+                    <form action="proses.php" method="POST">
+                        <label>nama</label>
+                        <input type="text" name="nama" required><br>
+                        <label>email</label>
+                        <input type="email" name="email"><br>
+                        <label>umur</label>
+                        <input type="umur" name="umur"><br>
+
+                        <label>Gender</label>
+                        <input type="radio" name="gender">Laki
+                        <input type="radio" name="gender">perempuan
+                        <br>
+                        
+                        <label>Skill</label>
+                        <br>
+                        <input type="checkbox" name="phpNative" value="phpNative">phpNative
+                        <input type="checkbox" name="Laravel" value="Laravel">Laravel
+                        <input type="checkbox" name="CI" value="CI">CI
+                        <br>
+                        <input type="submit">
+                    </form>
+                </td>
+            </table>
+        </div>
+        
+        <!-- CONTACT -->
+        <div class="contact" id="contact">
+            <br>
+            <h1>MY CONTACT</h1>
+            <p>You can reach me from:</p>
+            <table>
+                <tr>
+                    <td>Adrress</td>
+                    <td>:</td>
+                    <td>Jl. Semarang No. 420 RT 6/9</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td>bimandugal@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>:</td>
+                    <td>+6281227499469</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
