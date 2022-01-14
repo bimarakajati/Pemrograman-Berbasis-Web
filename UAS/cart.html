@@ -14,7 +14,7 @@
         <link rel="icon" href="img/favicon.ico" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body class="is-loading" oncontextmenu="return false" onkeydown="return false" onmousedown="return false">
+    <body class="is-loading" oncontextmenu="return false" style="background-color: white;">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid py-2">
@@ -125,17 +125,64 @@
             <div class="row">
                 <div class="col-md-6 d-flex justify-content-center mx-auto">
                     <div class="cart_logo">
-                        <img src="img/1.png" alt="Gambar Produk" class="cart_img"/>
+                        <div id="gambar">
+                            <!-- <img src="img/1.png" alt="Gambar Produk" class="cart_img"/> -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-center">
-                    <h1 class="display-5 fw-bold">Black Ark Hooded Sweatshirt - Black</h1>
+                    <div id="nama">
+                        <!-- <h1 class="display-5 fw-bold">Black Ark Hooded Sweatshirt - Black</h1> -->
+                    </div>
                     <hr>
-                    <h2 class="my-4">$ 400</h2>
-                    <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore exercitationem veniam voluptates repellendus enim, voluptatibus doloremque magni ea praesentium odit quasi dicta quod ipsa incidunt tempora perspiciatis reprehenderit! Voluptatem, repellendus.</p> -->
-                    <button class="btn btn-outline-danger my-5" onclick="myFunction()">
-                        Bayar Sekarang
-                    </button>
+                    <div id="harga">
+                        <!-- <h2 class="my-4">$ 400</h2> -->
+                    </div>
+                    <div id="deskripsi">
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore exercitationem veniam voluptates repellendus enim, voluptatibus doloremque magni ea praesentium odit quasi dicta quod ipsa incidunt tempora perspiciatis reprehenderit! Voluptatem, repellendus.</p>
+                    </div>
+                    <!-- Form -->
+                    <form>
+                        <div class="form-group mb-3 row">
+                            <label class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" id="form_email" name="email" class="form-control border-dark" aria-describedby="emailHelp" placeholder="Masukkan email..">
+                                <!-- <small id="emailHelp" class="form-text text-muted">Kami tidak akan pernah membagikan email Anda kepada orang lain.</small> -->
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="form_nama" name="name" class="form-control border-dark" placeholder="Masukkan nama..">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-sm-2 col-form-label">Alamat</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="form_alamat" name="address" class="form-control border-dark" placeholder="Masukkan alamat..">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label class="col-sm-2 col-form-label">Total</label>
+                            <div class="col-sm-10">
+                                <select class="form-control border-dark" id="form_total">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" value="" id="form_cek">
+                            <label class="form-check-label" for="form_cek" style="cursor: pointer;">
+                                Setuju dengan syarat dan ketentuan
+                            </label>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-danger">Submit</button> -->
+                        <div class="btn btn-outline-danger" onclick="beliSekarang()">Beli Sekarang</div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -160,9 +207,27 @@
             <p>Supreme Store by Bima Rakajati &copy; 2022.</p>
         </div>
 
+        <!-- JSON -->
         <script>
-            function myFunction() {
-                alert('Pembayaran "Black Ark Hooded Sweatshirt - Black" Berhasil!');
+            let params = new URLSearchParams(location.search); // fetch data from url
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function () {
+                myObj = JSON.parse(this.responseText);
+                document.getElementById("gambar").innerHTML = '<img src="img/' + myObj[params.get('x')-1].img_produk + '" alt="Gambar Produk" class="cart_img"/>';
+                document.getElementById("nama").innerHTML = '<h1 class="display-5 fw-bold">' + myObj[params.get('x')-1].nm_produk + '</h1>';
+                document.getElementById("harga").innerHTML = '<h2 class="my-4">$ ' + myObj[params.get('x')-1].harga_produk + '</h2>';
+            };
+            xmlhttp.open("GET", "data.json");
+            xmlhttp.send();
+
+            function beliSekarang() {
+                alert('Pembelian ' + myObj[params.get('x')-1].nm_produk + ' Berhasil!\nTotal Harga: $' + (myObj[params.get('x')-1].harga_produk)*(document.getElementById('form_total').value) + '');
+                // Reset Form
+                document.getElementById('form_email').value = '';
+                document.getElementById('form_nama').value = '';
+                document.getElementById('form_alamat').value = '';
+                document.getElementById('form_total').value = '1';
+                document.getElementById("form_cek").checked = false;
             }
         </script>
 

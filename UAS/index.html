@@ -209,8 +209,8 @@
                     text += "<img src='img/" + myObj[x].img_produk + "' class='card-img-top' alt='...'>";
                     text += "<div class='card-body'>";
                     text += "<h5 class='card-title'>" + myObj[x].nm_produk + "</h5>";
-                    text += "<p class='card-text'>" + myObj[x].harga_produk + "</p>";
-                    text += "<a href='cart.html' class='btn btn-outline-danger'>Beli</a>";
+                    text += "<p class='card-text'>$ " + myObj[x].harga_produk + "</p>";
+                    text += "<a href='cart.html?x=" + myObj[x].id_produk + "' class='btn btn-outline-danger'>Beli</a>";
                     text += "</div>";
                     text += "</div>";
                 }
